@@ -1,0 +1,6 @@
+PORTFOLIO DE JESUS ALESSIO GONZALEZ PABON
+
+Extrae el ZIP y abre index.html con Edge, Chrome o Firefox.
+
+El correo y el teléfono aparecen como texto normal, no como botones ni enlaces.
+La web mantiene su diseño, idiomas y selector de tema.
