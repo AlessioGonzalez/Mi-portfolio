@@ -135,6 +135,70 @@ section>h2:before{content:attr(data-index);display:block;margin-bottom:8px;color
 @media(max-width:820px){.interest-grid,.cert-grid{grid-template-columns:1fr}.interest-card,.cert-card{min-height:0}.hero-tags{margin-bottom:4px}}
 @media(min-width:821px){.interest-card:nth-child(2){transform:translateY(16px)}.interest-card:nth-child(2):hover{transform:translateY(12px)}}
 
+
+/* Blueprint feature: technical drawing panel */
+.blueprint{position:relative;margin-top:34px;padding:clamp(18px,3vw,30px);overflow:hidden;border:1px solid #285c9a;border-radius:10px;background-color:#061a35;background-image:linear-gradient(rgba(91,157,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(91,157,255,.12) 1px,transparent 1px),linear-gradient(rgba(91,157,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(91,157,255,.045) 1px,transparent 1px);background-size:32px 32px,32px 32px,8px 8px,8px 8px;color:#e5f2ff;box-shadow:0 18px 50px rgba(3,20,48,.18);isolation:isolate}
+.blueprint:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 76% 45%,rgba(28,115,220,.22),transparent 54%);pointer-events:none;z-index:-1}
+.blueprint-topline,.blueprint-footer{display:flex;justify-content:space-between;gap:14px;align-items:center;font:600 10px var(--mono);letter-spacing:.13em;color:#83baff}
+.blueprint-index{color:#c5e2ff}.blueprint-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:center;padding:28px 0 20px}.blueprint-copy{max-width:370px}.blueprint-overline{font:600 10px var(--mono);letter-spacing:.14em;color:#69c9ff;margin:0 0 12px}.blueprint-copy h3{font-size:clamp(25px,4vw,42px);line-height:1.05;letter-spacing:-.04em;margin:0 0 14px;color:#f4f9ff}.blueprint-copy>p:not(.blueprint-overline){color:#b9d5f3;font-size:15px;max-width:42ch;margin:0}.blueprint-coordinates{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;padding-top:14px;border-top:1px solid rgba(137,190,255,.25);font:500 10px var(--mono);letter-spacing:.08em;color:#78b7f7}.blueprint-drawing{position:relative;min-width:0}.blueprint-drawing svg{display:block;width:100%;height:auto;overflow:visible}.bp-main,.bp-dim,.bp-cross{fill:none;stroke:#8ed7ff;stroke-width:1.5;vector-effect:non-scaling-stroke}.bp-main{stroke:#b5e7ff;stroke-width:1.8;filter:drop-shadow(0 0 4px rgba(84,184,255,.3))}.bp-dim{stroke:#4b91d1;stroke-width:1}.bp-labels{fill:#80bdf2;font:9px var(--mono);letter-spacing:1px}.bp-cross{stroke:#4f9de2;stroke-width:1}.blueprint-scan{position:absolute;left:5%;right:5%;top:4%;height:1px;background:#9ee7ff;box-shadow:0 0 12px 2px rgba(88,191,255,.6);opacity:.55;animation:blueprintScan 6s ease-in-out infinite;pointer-events:none}.blueprint-footer{padding-top:14px;border-top:1px solid rgba(137,190,255,.25);font-size:9px}.blueprint-footer span:last-child{color:#6be0c0}.blueprint-footer span:last-child::first-letter{color:#6be0c0}
+@keyframes blueprintScan{0%,100%{transform:translateY(0);opacity:.2}50%{transform:translateY(250px);opacity:.8}}
+@media(max-width:700px){.blueprint-layout{grid-template-columns:1fr;gap:12px}.blueprint-copy{max-width:unset}.blueprint-drawing svg{max-height:260px}.blueprint-topline,.blueprint-footer{font-size:8px;letter-spacing:.08em}.blueprint-coordinates{margin-top:16px}}
+@media(prefers-reduced-motion:reduce){.blueprint-scan{animation:none;display:none}}
+
+
+/* Professional skills dashboard and motion system */
+.skill-dashboard{display:grid;grid-template-columns:1.12fr .88fr;gap:16px;align-items:stretch}
+.skill-panel{position:relative;overflow:hidden;padding:clamp(18px,2.4vw,26px);border:1px solid var(--line);border-radius:13px;background:linear-gradient(145deg,var(--card),var(--bg));box-shadow:0 12px 35px rgba(20,50,100,.06)}
+.skill-panel:after{content:"";position:absolute;width:190px;height:190px;right:-100px;top:-100px;border:1px solid var(--pink);border-radius:50%;opacity:.15;pointer-events:none}
+.panel-heading{display:flex;align-items:center;gap:13px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.panel-index{display:grid;place-items:center;width:35px;height:35px;border-radius:9px;background:var(--pink);color:var(--accent-ink);font:700 12px var(--mono)}
+.panel-heading h3{margin:0;font-size:18px}.panel-heading p{margin:2px 0 0;color:var(--mute);font-size:12px}.panel-symbol{margin-left:auto;color:var(--pink);font-size:25px}
+.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:17px}
+.tool-card{min-width:0;display:flex;align-items:center;gap:10px;padding:11px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);transition:transform .25s,border-color .25s,box-shadow .25s}
+.tool-card:hover{transform:translateY(-4px);border-color:var(--pink);box-shadow:0 8px 22px var(--glow)}
+.tool-icon{flex:0 0 34px;width:34px;height:34px;display:grid;place-items:center;border-radius:8px;background:var(--card);color:var(--pink);font:700 13px var(--mono);border:1px solid var(--line)}
+.tool-card b{display:block;font-size:12px;line-height:1.25}.tool-card small{display:block;margin-top:3px;color:var(--mute);font-size:10px;line-height:1.3}.tool-card>i{margin-left:auto;color:var(--mute);font:10px var(--mono);font-style:normal}
+.panel-foot{display:flex;align-items:center;gap:9px;margin-top:17px;padding-top:13px;border-top:1px solid var(--line);font:10px var(--mono);color:var(--mute);letter-spacing:.04em}.pulse-dot{width:7px;height:7px;margin-left:auto;border-radius:50%;background:#22b982;box-shadow:0 0 0 0 rgba(34,185,130,.4);animation:pulseDot 2s infinite}
+.soft-skill-list{display:grid;gap:7px;margin-top:16px}.soft-skill{display:flex;align-items:center;gap:10px;padding:9px 10px;border:1px solid transparent;border-radius:7px;font-size:13px;transition:background .2s,border-color .2s,transform .2s}.soft-skill:hover{background:var(--bg);border-color:var(--line);transform:translateX(4px)}.soft-icon{display:grid;place-items:center;width:28px;height:28px;border-radius:7px;background:var(--glow);color:var(--pink);font-size:15px}.soft-skill>b{margin-left:auto;color:var(--mute);font:10px var(--mono)}.team-skill{background:var(--glow);border-color:color-mix(in srgb,var(--pink) 24%,transparent)}
+.language-strip{display:flex;gap:22px;margin-top:15px;padding-top:14px;border-top:1px solid var(--line)}.language-strip small{display:block;margin-bottom:4px;color:var(--mute);font:10px var(--mono);text-transform:uppercase}.language-strip strong{font-size:13px}.language-strip em{font-style:normal;color:var(--pink);font:11px var(--mono)}
+
+/* Reveal effects activate only when JavaScript is available; content stays readable otherwise */
+.js-ready .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}.js-ready .reveal.visible{opacity:1;transform:translateY(0)}
+.hero-copy>*{animation:riseIn .75s both}.hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.24s}.hero-copy>*:nth-child(5){animation-delay:.32s}
+.term{animation:terminalFloat 7s ease-in-out infinite}.blueprint{animation:blueprintGlow 7s ease-in-out infinite}.blueprint-drawing svg{transform-origin:center;animation:blueprintFloat 8s ease-in-out infinite}
+@keyframes riseIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@keyframes terminalFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes blueprintFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}@keyframes blueprintGlow{0%,100%{box-shadow:0 18px 50px rgba(3,20,48,.18)}50%{box-shadow:0 20px 60px rgba(30,110,220,.28)}}@keyframes pulseDot{70%{box-shadow:0 0 0 7px rgba(34,185,130,0)}}@keyframes blinkCursor{50%{opacity:0}}
+@media(max-width:900px){.skill-dashboard{grid-template-columns:1fr}}
+@media(max-width:540px){.tool-grid{grid-template-columns:1fr}.language-strip{gap:14px}.mock-stats{gap:4px}.mock-stats div{padding:6px}}
+@media(prefers-reduced-motion:reduce){.term,.blueprint,.blueprint-drawing svg,.pulse-dot,.terminal-cursor{animation:none!important}.js-ready .reveal{opacity:1;transform:none;transition:none}.hero-copy>*{animation:none}}
+
+
+/* ===== Proyectos (rediseño) ===== */
+.project-intro{max-width:62ch;margin:0 0 22px;color:var(--mute)}
+.project-list{display:grid;gap:20px}
+.project-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,var(--card),var(--bg));transition:transform .3s,border-color .3s,box-shadow .3s}
+.project-card:hover,.js-ready .project-card.reveal.visible:hover{transform:translateY(-4px);border-color:var(--pink);box-shadow:0 16px 36px var(--glow)}
+.js-ready .project-card.reveal.visible{transition:opacity .7s ease,transform .3s,border-color .3s,box-shadow .3s}
+.project-bar{display:flex;align-items:center;gap:7px;padding:10px 14px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 70%,transparent);font:600 12px var(--mono);color:var(--mute)}
+.project-bar i{flex:none;width:10px;height:10px;border-radius:50%;background:var(--line)}
+.project-bar i:first-child{background:var(--pink)}
+.project-file{min-width:0;margin-left:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.project-status{flex:none;margin-left:auto;padding:3px 10px;border:1px solid color-mix(in srgb,var(--pink) 45%,transparent);border-radius:999px;color:var(--pink);font:600 11px var(--mono);white-space:nowrap}
+.project-body{display:grid;grid-template-columns:1.05fr 1fr;gap:22px 34px;padding:24px}
+.project-body>*{min-width:0}
+.project-num{display:block;color:var(--pink);font:600 12px var(--mono);letter-spacing:.14em}
+.project-body h3{margin:8px 0 10px;font-size:clamp(22px,3vw,28px);line-height:1.12;letter-spacing:-.025em}
+.project-body p{margin:0 0 16px;color:var(--mute);font-size:16px}
+.project-tags{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none}
+.project-tags li{padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--bg);font:600 11px var(--mono)}
+.project-side{display:grid;gap:18px;align-content:start}
+.project-side h4{margin:0 0 9px;color:var(--mute);font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.project-steps{display:grid;gap:9px;margin:0;padding:0;list-style:none}
+.project-steps li{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.4}
+.project-steps li:before{content:"";flex:none;width:16px;height:16px;margin-top:2px;border:2px solid var(--pink);border-radius:5px}
+.project-code{margin:0;padding:13px 15px;overflow-x:auto;border-radius:8px;background:var(--panel);color:var(--panel-ink);font:13px/1.7 var(--mono);white-space:pre;-webkit-overflow-scrolling:touch}
+.project-code b{color:#5b9dff;font-weight:600}
+@media(max-width:820px){.project-body{grid-template-columns:1fr;gap:20px;padding:20px}}
+@media(max-width:540px){.project-list{gap:16px}.project-bar{padding:9px 12px}.project-body{padding:16px}.project-body p{font-size:15px}.project-code{font-size:12px;padding:11px 12px}.project-card:hover,.js-ready .project-card.reveal.visible:hover{transform:none}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Jesús Alessio González Pabon","jobTitle":"Estudiante de Sistemas Microinformáticos y Redes","email":"mailto:alessiognzz@icloud.com","url":"https://github.com/AlessioGonzalez","sameAs":["https://www.linkedin.com/in/alessiogonzalezz/","https://github.com/AlessioGonzalez"]}
@@ -186,19 +250,37 @@ section>h2:before{content:attr(data-index);display:block;margin-bottom:8px;color
     </ol>
   </section>
 
-  <section id="skills"><h2 data-i="n_skills"></h2>
-    <div>
-      <div class="cols">
-        <div><h3 data-i="s_tech"></h3><ul>
-          <li data-i="k1"></li><li data-i="k2"></li><li data-i="k3"></li><li data-i="k4"></li><li data-i="k5"></li><li data-i="k6"></li></ul></div>
-        <div><h3 data-i="s_soft"></h3><ul>
-          <li data-i="c1"></li><li data-i="c2"></li><li data-i="c3"></li><li data-i="c4"></li></ul>
-          <h3 style="margin-top:28px" data-i="s_lang"></h3>
-          <div class="langs"><div><b data-i="l1"></b><span data-i="l1v"></span></div><div><b data-i="l2"></b><span>B1</span></div></div></div>
+  <section id="skills" class="skills-section">
+    <h2 data-i="n_skills"></h2>
+    <div class="skills-content">
+      <p class="section-intro" data-i="skills_intro"></p>
+      <div class="skill-dashboard">
+        <article class="skill-panel technical-panel">
+          <div class="panel-heading"><span class="panel-index">01</span><div><h3 data-i="s_tech"></h3><p data-i="skills_tech_sub"></p></div><span class="panel-symbol">⌘</span></div>
+          <div class="tool-grid">
+            <div class="tool-card"><span class="tool-icon linux-icon">$_</span><span><b>Linux / Debian</b><small data-i="tool_os"></small></span><i>01</i></div>
+            <div class="tool-card"><span class="tool-icon python-icon">Py</span><span><b>Python</b><small data-i="tool_python"></small></span><i>02</i></div>
+            <div class="tool-card"><span class="tool-icon network-icon">⌘</span><span><b data-i="k4"></b><small data-i="tool_network"></small></span><i>03</i></div>
+            <div class="tool-card"><span class="tool-icon hardware-icon">▦</span><span><b data-i="k1"></b><small data-i="tool_hardware"></small></span><i>04</i></div>
+            <div class="tool-card"><span class="tool-icon office-icon">▤</span><span><b data-i="k5"></b><small data-i="tool_office"></small></span><i>05</i></div>
+            <div class="tool-card"><span class="tool-icon debug-icon">⌕</span><span><b data-i="k6"></b><small data-i="tool_debug"></small></span><i>06</i></div>
+          </div>
+          <div class="panel-foot"><span data-i="skills_focus"></span><span class="pulse-dot"></span></div>
+        </article>
+        <article class="skill-panel soft-panel">
+          <div class="panel-heading"><span class="panel-index">02</span><div><h3 data-i="s_soft"></h3><p data-i="skills_soft_sub"></p></div><span class="panel-symbol">✳</span></div>
+          <div class="soft-skill-list">
+            <div class="soft-skill"><span class="soft-icon">◈</span><span data-i="c1"></span><b>01</b></div>
+            <div class="soft-skill"><span class="soft-icon">◎</span><span data-i="c2"></span><b>02</b></div>
+            <div class="soft-skill"><span class="soft-icon">↗</span><span data-i="c3"></span><b>03</b></div>
+            <div class="soft-skill"><span class="soft-icon">▦</span><span data-i="c4"></span><b>04</b></div>
+            <div class="soft-skill team-skill"><span class="soft-icon">⌘</span><span data-i="c5"></span><b>05</b></div>
+          </div>
+          <div class="language-strip"><div><small data-i="s_lang"></small><strong><span data-i="l1"></span> <em data-i="l1v"></em></strong></div><div><small>&nbsp;</small><strong><span data-i="l2"></span> <em>B1</em></strong></div></div>
+        </article>
       </div>
     </div>
   </section>
-
 
   <section id="interests">
     <h2 data-i="n_interest" data-index="03"></h2>
@@ -224,25 +306,116 @@ section>h2:before{content:attr(data-index);display:block;margin-bottom:8px;color
           <div class="card-tags"><span>Debian</span><span>Hardware</span><span>LAN</span></div>
         </article>
       </div>
-    </div>
-  </section>
 
-  <section id="projects"><h2 data-i="n_proj"></h2>
-    <div>
-      <p class="note" data-i="p_note"></p>
-      <div class="proj">
-        <article><span class="t">Python</span><h3 data-i="p1_t"></h3><p data-i="p1_d"></p></article>
-        <article><span class="t">Linux</span><h3 data-i="p2_t"></h3><p data-i="p2_d"></p></article>
-        <article><span class="t">Hardware</span><h3 data-i="p3_t"></h3><p data-i="p3_d"></p></article>
+      <div class="blueprint" aria-labelledby="blueprint-title">
+        <div class="blueprint-topline">
+          <span class="blueprint-kicker" data-i="bp_kicker">LAB / 001 · ESQUEMA TÉCNICO</span>
+          <span class="blueprint-index">JA—SYS.01</span>
+        </div>
+        <div class="blueprint-layout">
+          <div class="blueprint-copy">
+            <p class="blueprint-overline" data-i="bp_overline">DISEÑO · SISTEMAS · CURIOSIDAD</p>
+            <h3 id="blueprint-title" data-i="bp_title">Pensar. Diseñar. Construir.</h3>
+            <p data-i="bp_desc">Un vistazo a cómo me gusta aprender: entender las piezas, ver cómo se conectan y convertir ideas en proyectos funcionales.</p>
+            <div class="blueprint-coordinates"><span>28°07′N</span><span>15°25′W</span><span>REV. 01</span></div>
+          </div>
+          <div class="blueprint-drawing" aria-hidden="true">
+            <div class="blueprint-scan"></div>
+            <svg viewBox="0 0 520 330" role="img">
+              <g class="bp-dim">
+                <path d="M70 42H450M70 35V49M450 35V49M70 282H450M70 275V289M450 275V289"/>
+                <path d="M42 68V258M35 68H49M35 258H49"/>
+              </g>
+              <g class="bp-main">
+                <rect x="112" y="82" width="296" height="164" rx="9"/>
+                <rect x="132" y="101" width="112" height="104" rx="4"/>
+                <rect x="151" y="120" width="74" height="66" rx="2"/>
+                <path d="M168 120V186M188 120V186M208 120V186M151 142H225M151 164H225"/>
+                <rect x="270" y="102" width="116" height="44" rx="3"/>
+                <rect x="270" y="160" width="52" height="46" rx="3"/>
+                <rect x="334" y="160" width="52" height="46" rx="3"/>
+                <path d="M244 153H258V124H270M258 153V183H270M322 183H334M188 205V225H294V246M294 225H360V206"/>
+                <circle cx="294" cy="225" r="4"/><circle cx="258" cy="153" r="4"/>
+                <path d="M112 116H88V92H62M408 118H432V94H458M408 216H435V242H464"/>
+                <circle cx="62" cy="92" r="4"/><circle cx="458" cy="94" r="4"/><circle cx="464" cy="242" r="4"/>
+              </g>
+              <g class="bp-labels">
+                <text x="70" y="22">SYSTEM BOARD / 01</text>
+                <text x="278" y="92">MEMORY BUS</text>
+                <text x="278" y="222">I/O LINK</text>
+                <text x="70" y="310">FIG. A — CONCEPT DIAGRAM</text>
+                <text x="390" y="310">1:1</text>
+              </g>
+              <g class="bp-cross"><path d="M260 18V34M252 26H268M260 294V310M252 302H268"/></g>
+            </svg>
+          </div>
+        </div>
+        <div class="blueprint-footer"><span data-i="bp_footer">CUADERNO DE EXPLORACIÓN · APRENDER HACIENDO</span><span>● LIVE DRAFT</span></div>
       </div>
     </div>
   </section>
 
+  <section id="projects" class="projects-section"><h2 data-i="n_proj"></h2>
+    <div>
+      <p class="project-intro" data-i="p_intro"></p>
+      <div class="project-list">
+      <article class="project-card">
+        <div class="project-bar"><i></i><i></i><i></i><span class="project-file">tareas.py</span><span class="project-status" data-i="p_status"></span></div>
+        <div class="project-body">
+          <div class="project-main">
+            <span class="project-num">01 / PYTHON</span>
+            <h3 data-i="p1_t"></h3>
+            <p data-i="p1_d"></p>
+            <ul class="project-tags"><li>Python</li><li>JSON</li><li>CLI</li></ul>
+          </div>
+          <div class="project-side">
+            <div><h4 data-i="p_plan"></h4><ul class="project-steps"><li data-i="p1_s1"></li><li data-i="p1_s2"></li><li data-i="p1_s3"></li></ul></div>
+            <div><h4 data-i="p_ex"></h4><pre class="project-code"><b>$</b> python tareas.py add "Estudiar Debian"
+<b>$</b> python tareas.py list
+<b>$</b> python tareas.py done 1</pre></div>
+          </div>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-bar"><i></i><i></i><i></i><span class="project-file">backup.sh</span><span class="project-status" data-i="p_status"></span></div>
+        <div class="project-body">
+          <div class="project-main">
+            <span class="project-num">02 / LINUX</span>
+            <h3 data-i="p2_t"></h3>
+            <p data-i="p2_d"></p>
+            <ul class="project-tags"><li>Bash</li><li>Debian</li><li>cron</li></ul>
+          </div>
+          <div class="project-side">
+            <div><h4 data-i="p_plan"></h4><ul class="project-steps"><li data-i="p2_s1"></li><li data-i="p2_s2"></li><li data-i="p2_s3"></li></ul></div>
+            <div><h4 data-i="p_ex"></h4><pre class="project-code"><b>$</b> ./backup.sh ~/Documentos ~/copias
+<b>&gt;</b> copias/documentos_2026-11-05.tar.gz</pre></div>
+          </div>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-bar"><i></i><i></i><i></i><span class="project-file">red.md</span><span class="project-status" data-i="p_status"></span></div>
+        <div class="project-body">
+          <div class="project-main">
+            <span class="project-num">03 / LAN</span>
+            <h3 data-i="p3_t"></h3>
+            <p data-i="p3_d"></p>
+            <ul class="project-tags"><li>LAN</li><li>IP</li><li>Wi-Fi</li></ul>
+          </div>
+          <div class="project-side">
+            <div><h4 data-i="p_plan"></h4><ul class="project-steps"><li data-i="p3_s1"></li><li data-i="p3_s2"></li><li data-i="p3_s3"></li></ul></div>
+            <div><h4 data-i="p_ex"></h4><pre class="project-code">router   192.168.1.1
+portatil 192.168.1.10
+movil    192.168.1.20</pre></div>
+          </div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
 
   <section id="certificates">
     <h2 data-i="n_certs" data-index="05"></h2>
     <div>
-      <p class="section-intro" data-i="cert_intro"></p>
       <div class="cert-grid">
         <article class="cert-card">
           <span class="cert-state" data-i="cert_pending"></span>
@@ -277,67 +450,67 @@ var T={
 es:{n_about:"Sobre mí",n_edu:"Formación",n_skills:"Habilidades",n_proj:"Proyectos",n_contact:"Contacto",
 role:"Estudiante de Sistemas Microinformáticos y Redes",
 lead:"Me interesa aprender desarrollo de aplicaciones y ciberseguridad, además de Linux, redes, hardware y soporte técnico. Me motiva crear, entender cómo funcionan las cosas y seguir aprendiendo.",
-cta1:"Ver proyectos",cta2:"Escríbeme",cta3:"Ver CV",p_status:"En desarrollo",t_status:"Estudiante de SMR. Practicando Linux y Python.",
+cta1:"Ver proyectos",cta2:"Escríbeme",cta3:"Ver CV",p_status:"Planificado",p_intro:"Tres proyectos sencillos y realizables que estoy planificando para practicar lo que voy aprendiendo en clase.",p_plan:"Plan de trabajo",p_ex:"Ejemplo",p1_t:"Gestor de tareas",p1_d:"Aplicación de consola en Python para añadir, listar y completar tareas, guardando los datos en un archivo JSON.",p1_s1:"Crear y listar tareas",p1_s2:"Marcar tareas como hechas",p1_s3:"Guardar los datos en un archivo JSON",p2_t:"Script de copia de seguridad",p2_d:"Script en Bash que comprime una carpeta y la guarda con la fecha en el nombre, probado en Debian.",p2_s1:"Escribir el script con tar",p2_s2:"Añadir la fecha al nombre del archivo",p2_s3:"Programarlo con cron y documentarlo",p3_t:"Mapa de mi red local",p3_d:"Documentación de una red doméstica: dispositivos, direcciones IP y un diagrama sencillo.",p3_s1:"Listar los dispositivos conectados",p3_s2:"Anotar sus direcciones IP",p3_s3:"Dibujar el diagrama y explicarlo",t_status:"Estudiante de SMR. Practicando Linux y Python.",
 about_p:"Soy estudiante de Sistemas Microinformáticos y Redes y me interesa seguir creciendo en desarrollo de aplicaciones y ciberseguridad, además de la administración de sistemas, Linux, hardware y redes. Me gusta aprender mediante proyectos prácticos, entender cómo se construyen las aplicaciones, conocer buenas prácticas de seguridad y documentar las soluciones. Actualmente estoy reforzando mis bases en Debian y Python.",
 e1_t:"Ciclo de Sistemas Microinformáticos y Redes (SMR)",e1_d:"Sept. 2026 – Jun. 2028 · 1.º curso",e1_p:"Montaje y mantenimiento de equipos, sistemas operativos y configuración básica de redes locales.",
 e2_t:"Educación Secundaria Obligatoria (ESO)",e2_d:"Sept. 2022 – Jun. 2026",e2_p:"Título obtenido.",
-s_tech:"Herramientas y base técnica",s_soft:"Competencias",s_lang:"Idiomas",
+s_tech:"Herramientas y base técnica",s_soft:"Competencias",s_lang:"Idiomas",skills_intro:"Una vista clara de las herramientas que estoy aprendiendo y las competencias que aporto al trabajo diario.",skills_tech_sub:"Entornos y fundamentos que practico",skills_soft_sub:"Cómo colaboro y afronto retos",tool_os:"Sistemas y terminal",tool_python:"Fundamentos de programación",tool_network:"Conectividad y redes locales",tool_hardware:"Componentes y montaje",tool_office:"Documentos y productividad",tool_debug:"Análisis de incidencias",skills_focus:"EN APRENDIZAJE CONTINUO",c5:"Trabajo en equipo",
 k1:"Hardware y componentes",k2:"Linux / Debian",k3:"Python (nivel inicial)",k4:"Redes locales básicas",k5:"Ofimática",k6:"Diagnóstico de incidencias",
 c1:"Resolución de problemas",c2:"Comunicación con usuarios",c3:"Aprendizaje autónomo",c4:"Organización",
 l1:"Español",l1v:"Nativo",l2:"Inglés",
-p_note:"Estos son proyectos personales en desarrollo. Añadiré capturas, documentación y enlaces a sus repositorios cuando tenga cada proyecto publicado.",
-p1_t:"Gestor de tareas",p1_d:"Proyecto de aplicación de consola para crear, consultar y completar tareas, con persistencia de datos en un archivo JSON.",
-p2_t:"Cuaderno de Debian",p2_d:"Cuaderno de aprendizaje para reunir comandos, prácticas de administración básica y evidencias propias de trabajo con Debian.",
-p3_t:"Guía de componentes",p3_d:"Recurso visual para identificar los componentes principales de un equipo y explicar comprobaciones básicas de hardware.",
-"n_interest":"Áreas de interés","n_certs":"Certificados y formación","eyebrow":"Portfolio · Estudiante de SMR","interest_intro":"Estas son las áreas en las que quiero profundizar y desarrollar proyectos a medida que avance mi formación.","interest_app_t":"Desarrollo de aplicaciones","interest_app_d":"Quiero aprender a diseñar y programar aplicaciones útiles, mejorar mi lógica de programación y explorar interfaces y desarrollo web.","interest_cyber_t":"Ciberseguridad","interest_cyber_d":"Me interesa aprender a proteger sistemas y redes, comprender amenazas comunes, cuidar la privacidad y aplicar la seguridad de forma ética y legal.","interest_systems_t":"Sistemas y redes","interest_systems_d":"Quiero seguir practicando con Linux, configuración de redes, mantenimiento de equipos y resolución de incidencias.","cert_intro":"Formación complementaria que estoy realizando o que tengo previsto completar. Solo marcaré como obtenido aquello que haya terminado y pueda acreditar.","cert_pending":"Completado","cert_desc":"Curso introductorio sobre amenazas, protección de datos, privacidad y fundamentos de ciberseguridad. Al completar el curso y sus actividades podrás obtener el reconocimiento digital de Cisco.","cert_meta":"Gratis · Nivel principiante · Aproximadamente 6 horas · A tu ritmo","cert_link":"Consultar curso oficial ↗",ct_p:"¿Tienes una consulta o una oportunidad de prácticas? Escríbeme:",ph:"Teléfono",em:"Correo"},
+mock_tasks_title:"Mis tareas",mock_task_a:"Preparar estructura",mock_task_b:"Guardar datos JSON",mock_task_c:"Revisar tareas",mock_hardware_title:"Arquitectura de un PC",
+
+
+
+"n_interest":"Áreas de interés","n_certs":"Certificados y formación","eyebrow":"Portfolio · Estudiante de SMR","interest_intro":"Estas son las áreas en las que quiero profundizar y desarrollar proyectos a medida que avance mi formación.",bp_kicker:'LAB / 001 · ESQUEMA TÉCNICO',bp_overline:'DISEÑO · SISTEMAS · CURIOSIDAD',bp_title:'Pensar. Diseñar. Construir.',bp_desc:'Un vistazo a cómo me gusta aprender: entender las piezas, ver cómo se conectan y convertir ideas en proyectos funcionales.',bp_footer:'CUADERNO DE EXPLORACIÓN · APRENDER HACIENDO',"interest_app_t":"Desarrollo de aplicaciones","interest_app_d":"Quiero aprender a diseñar y programar aplicaciones útiles, mejorar mi lógica de programación y explorar interfaces y desarrollo web.","interest_cyber_t":"Ciberseguridad","interest_cyber_d":"Me interesa aprender a proteger sistemas y redes, comprender amenazas comunes, cuidar la privacidad y aplicar la seguridad de forma ética y legal.","interest_systems_t":"Sistemas y redes","interest_systems_d":"Quiero seguir practicando con Linux, configuración de redes, mantenimiento de equipos y resolución de incidencias.","cert_pending":"Completado","cert_desc":"Curso introductorio sobre amenazas, protección de datos, privacidad y fundamentos de ciberseguridad. Al completar el curso y sus actividades podrás obtener el reconocimiento digital de Cisco.","cert_meta":"Gratis · Nivel principiante · Aproximadamente 6 horas · A tu ritmo","cert_link":"Consultar curso oficial ↗",ct_p:"¿Tienes una consulta o una oportunidad de prácticas? Escríbeme:",ph:"Teléfono",em:"Correo"},
 en:{n_about:"About me",n_edu:"Education",n_skills:"Skills",n_proj:"Projects",n_contact:"Contact",
 role:"Microcomputer Systems and Networks student",
 lead:"I want to keep learning application development and cybersecurity, alongside Linux, networking, hardware and technical support.",
-cta1:"See projects",cta2:"Contact me",cta3:"View CV",p_status:"In progress",t_status:"SMR student. Practising Linux and Python.",
+cta1:"See projects",cta2:"Contact me",cta3:"View CV",p_status:"Planned",p_intro:"Three simple, achievable projects I am planning in order to practise what I am learning in class.",p_plan:"Work plan",p_ex:"Example",p1_t:"Task manager",p1_d:"A Python console app to add, list and complete tasks, storing the data in a JSON file.",p1_s1:"Create and list tasks",p1_s2:"Mark tasks as done",p1_s3:"Save the data in a JSON file",p2_t:"Backup script",p2_d:"A Bash script that compresses a folder and saves it with the date in its name, tested on Debian.",p2_s1:"Write the script with tar",p2_s2:"Add the date to the file name",p2_s3:"Schedule it with cron and document it",p3_t:"Home network map",p3_d:"Documentation of a home network: devices, IP addresses and a simple diagram.",p3_s1:"List the connected devices",p3_s2:"Write down their IP addresses",p3_s3:"Draw the diagram and explain it",t_status:"SMR student. Practising Linux and Python.",
 about_p:"I am a Microcomputer Systems and Networks student interested in growing my skills in application development and cybersecurity, as well as system administration, Linux, hardware and networking. I enjoy learning through practical projects, understanding how applications are built, exploring good security practices and documenting solutions. I am currently strengthening my foundations in Debian and Python.",
 e1_t:"Microcomputer Systems and Networks (SMR) vocational course",e1_d:"Sept. 2026 – Jun. 2028 · 1st year",e1_p:"Assembling and maintaining computers, operating systems and basic local network setup.",
 e2_t:"Compulsory Secondary Education (ESO)",e2_d:"Sept. 2022 – Jun. 2026",e2_p:"Diploma obtained.",
-s_tech:"Tools and technical base",s_soft:"Soft skills",s_lang:"Languages",
+s_tech:"Tools and technical base",s_soft:"Soft skills",s_lang:"Languages",skills_intro:"A clear overview of the tools I am learning and the skills I bring to everyday work.",skills_tech_sub:"Environments and fundamentals I practise",skills_soft_sub:"How I collaborate and approach challenges",tool_os:"Systems and terminal",tool_python:"Programming fundamentals",tool_network:"Connectivity and local networks",tool_hardware:"Components and assembly",tool_office:"Documents and productivity",tool_debug:"Issue analysis",skills_focus:"CONTINUOUS LEARNING",c5:"Teamwork",
 k1:"Hardware and components",k2:"Linux / Debian",k3:"Python (beginner level)",k4:"Basic local networks",k5:"Office software",k6:"Troubleshooting",
 c1:"Problem solving",c2:"Communicating with users",c3:"Self-directed learning",c4:"Organisation",
 l1:"Spanish",l1v:"Native",l2:"English",
-p_note:"These are personal projects in progress. I’ll add screenshots, documentation and repository links as each project is published.",
-p1_t:"Task manager",p1_d:"A console-app project to create, view and complete tasks, storing data in a JSON file.",
-p2_t:"Debian notebook",p2_d:"A learning notebook for useful commands, basic administration exercises and personal evidence from Debian practice.",
-p3_t:"Components guide",p3_d:"A visual resource to identify a computer’s main components and explain basic hardware checks.",
-"n_interest":"Areas of interest","n_certs":"Certificates & learning","eyebrow":"Portfolio · SMR student","interest_intro":"These are the areas I want to explore further and build projects in as I continue my studies.","interest_app_t":"Application development","interest_app_d":"I want to learn how to design and code useful applications, strengthen my programming logic, and explore interfaces and web development.","interest_cyber_t":"Cybersecurity","interest_cyber_d":"I am interested in learning how to protect systems and networks, understand common threats, protect privacy, and apply security ethically and legally.","interest_systems_t":"Systems & networks","interest_systems_d":"I want to keep practising Linux, network configuration, computer maintenance and troubleshooting.","cert_intro":"Additional learning I am taking or plan to complete. I will only mark a credential as earned once I have completed it and can provide evidence.","cert_pending":"Not completed yet","cert_desc":"An introductory course covering threats, data protection, privacy and cybersecurity fundamentals. Completing the course and its activities can earn Cisco digital recognition.","cert_meta":"Free · Beginner · About 6 hours · Self-paced","cert_link":"View official course ↗",ct_p:"Have a question or a work placement to offer? Write to me:",ph:"Phone",em:"Email"},
+mock_tasks_title:"My tasks",mock_task_a:"Prepare structure",mock_task_b:"Save JSON data",mock_task_c:"Review tasks",mock_hardware_title:"PC architecture",
+
+
+
+"n_interest":"Areas of interest","n_certs":"Certificates & learning","eyebrow":"Portfolio · SMR student","interest_intro":"These are the areas I want to explore further and build projects in as I continue my studies.",bp_kicker:'LAB / 001 · TECHNICAL BLUEPRINT',bp_overline:'DESIGN · SYSTEMS · CURIOSITY',bp_title:'Think. Design. Build.',bp_desc:'A glimpse into how I like to learn: understand the components, see how they connect, and turn ideas into working projects.',bp_footer:'EXPLORATION NOTEBOOK · LEARNING BY DOING',"interest_app_t":"Application development","interest_app_d":"I want to learn how to design and code useful applications, strengthen my programming logic, and explore interfaces and web development.","interest_cyber_t":"Cybersecurity","interest_cyber_d":"I am interested in learning how to protect systems and networks, understand common threats, protect privacy, and apply security ethically and legally.","interest_systems_t":"Systems & networks","interest_systems_d":"I want to keep practising Linux, network configuration, computer maintenance and troubleshooting.","cert_pending":"Not completed yet","cert_desc":"An introductory course covering threats, data protection, privacy and cybersecurity fundamentals. Completing the course and its activities can earn Cisco digital recognition.","cert_meta":"Free · Beginner · About 6 hours · Self-paced","cert_link":"View official course ↗",ct_p:"Have a question or a work placement to offer? Write to me:",ph:"Phone",em:"Email"},
 fr:{n_about:"À propos",n_edu:"Formation",n_skills:"Compétences",n_proj:"Projets",n_contact:"Contact",
 role:"Étudiant en systèmes microinformatiques et réseaux",
 lead:"Je souhaite apprendre le développement d’applications et la cybersécurité, en plus de Linux, des réseaux, du matériel et du support technique.",
-cta1:"Voir les projets",cta2:"Me contacter",cta3:"Voir CV",p_status:"En cours",t_status:"Étudiant en SMR. Pratique Linux et Python.",
+cta1:"Voir les projets",cta2:"Me contacter",cta3:"Voir CV",p_status:"Prévu",p_intro:"Trois projets simples et réalisables que je prévois pour pratiquer ce que j’apprends en cours.",p_plan:"Plan de travail",p_ex:"Exemple",p1_t:"Gestionnaire de tâches",p1_d:"Application console en Python pour ajouter, lister et terminer des tâches, avec les données enregistrées dans un fichier JSON.",p1_s1:"Créer et lister des tâches",p1_s2:"Marquer les tâches comme faites",p1_s3:"Enregistrer les données dans un fichier JSON",p2_t:"Script de sauvegarde",p2_d:"Script Bash qui compresse un dossier et l’enregistre avec la date dans son nom, testé sous Debian.",p2_s1:"Écrire le script avec tar",p2_s2:"Ajouter la date au nom du fichier",p2_s3:"Le planifier avec cron et le documenter",p3_t:"Plan de mon réseau local",p3_d:"Documentation d’un réseau domestique : appareils, adresses IP et un schéma simple.",p3_s1:"Lister les appareils connectés",p3_s2:"Noter leurs adresses IP",p3_s3:"Dessiner le schéma et l’expliquer",t_status:"Étudiant en SMR. Pratique Linux et Python.",
 about_p:"Je suis étudiant en systèmes microinformatiques et réseaux et je souhaite développer mes compétences en développement d’applications et en cybersécurité, ainsi qu’en administration des systèmes, Linux, matériel et réseaux. J’aime apprendre par des projets pratiques, comprendre la création des applications, découvrir les bonnes pratiques de sécurité et documenter les solutions. Je renforce actuellement mes bases en Debian et Python.",
 e1_t:"Cycle de systèmes microinformatiques et réseaux (SMR)",e1_d:"Sept. 2026 – juin 2028 · 1re année",e1_p:"Montage et maintenance d’ordinateurs, systèmes d’exploitation et configuration de base des réseaux locaux.",
 e2_t:"Enseignement secondaire obligatoire (ESO)",e2_d:"Sept. 2022 – juin 2026",e2_p:"Diplôme obtenu.",
-s_tech:"Outils et bases techniques",s_soft:"Savoir-être",s_lang:"Langues",
+s_tech:"Outils et bases techniques",s_soft:"Savoir-être",s_lang:"Langues",skills_intro:"Un aperçu clair des outils que j’apprends et des compétences que j’apporte au travail quotidien.",skills_tech_sub:"Environnements et bases pratiqués",skills_soft_sub:"Ma façon de collaborer et de relever les défis",tool_os:"Systèmes et terminal",tool_python:"Bases de programmation",tool_network:"Connectivité et réseaux locaux",tool_hardware:"Composants et assemblage",tool_office:"Documents et productivité",tool_debug:"Analyse des incidents",skills_focus:"APPRENTISSAGE CONTINU",c5:"Travail en équipe",
 k1:"Matériel et composants",k2:"Linux / Debian",k3:"Python (niveau débutant)",k4:"Réseaux locaux de base",k5:"Bureautique",k6:"Diagnostic de pannes",
 c1:"Résolution de problèmes",c2:"Communication avec les utilisateurs",c3:"Apprentissage autonome",c4:"Organisation",
 l1:"Espagnol",l1v:"Langue maternelle",l2:"Anglais",
-p_note:"Ces projets personnels sont en cours. J’ajouterai des captures, de la documentation et des liens vers les dépôts lorsqu’ils seront publiés.",
-p1_t:"Gestionnaire de tâches",p1_d:"Projet d’application console pour créer, consulter et terminer des tâches, avec sauvegarde dans un fichier JSON.",
-p2_t:"Carnet Debian",p2_d:"Carnet d’apprentissage regroupant des commandes, des exercices d’administration de base et des preuves personnelles de pratique sous Debian.",
-p3_t:"Guide des composants",p3_d:"Ressource visuelle pour identifier les principaux composants d’un ordinateur et expliquer des vérifications matérielles simples.",
-"n_interest":"Centres d’intérêt","n_certs":"Certificats et formation","eyebrow":"Portfolio · Étudiant en SMR","interest_intro":"Voici les domaines que je souhaite approfondir et dans lesquels je veux réaliser des projets au fil de ma formation.","interest_app_t":"Développement d’applications","interest_app_d":"Je souhaite apprendre à concevoir et programmer des applications utiles, renforcer ma logique et découvrir les interfaces et le développement web.","interest_cyber_t":"Cybersécurité","interest_cyber_d":"Je souhaite apprendre à protéger les systèmes et les réseaux, comprendre les menaces courantes, préserver la confidentialité et appliquer la sécurité de manière éthique et légale.","interest_systems_t":"Systèmes et réseaux","interest_systems_d":"Je souhaite continuer à pratiquer Linux, la configuration réseau, la maintenance des ordinateurs et le diagnostic des problèmes.","cert_intro":"Formations complémentaires en cours ou prévues. Je ne présenterai un certificat comme obtenu qu’après l’avoir terminé et pouvoir le justifier.","cert_pending":"Terminé","cert_desc":"Cours d’introduction aux menaces, à la protection des données, à la confidentialité et aux bases de la cybersécurité. La réalisation du cours et des activités permet d’obtenir une reconnaissance numérique Cisco.","cert_meta":"Gratuit · Débutant · Environ 6 heures · À son rythme","cert_link":"Voir le cours officiel ↗",ct_p:"Une question ou un stage à proposer ? Écris-moi :",ph:"Téléphone",em:"E-mail"},
+mock_tasks_title:"Mes tâches",mock_task_a:"Préparer la structure",mock_task_b:"Enregistrer les données JSON",mock_task_c:"Vérifier les tâches",mock_hardware_title:"Architecture d’un PC",
+
+
+
+"n_interest":"Centres d’intérêt","n_certs":"Certificats et formation","eyebrow":"Portfolio · Étudiant en SMR","interest_intro":"Voici les domaines que je souhaite approfondir et dans lesquels je veux réaliser des projets au fil de ma formation.",bp_kicker:'LAB / 001 · PLAN TECHNIQUE',bp_overline:'CONCEPTION · SYSTÈMES · CURIOSITÉ',bp_title:'Penser. Concevoir. Construire.',bp_desc:'Un aperçu de ma façon d’apprendre : comprendre les composants, voir comment ils se connectent et transformer des idées en projets fonctionnels.',bp_footer:'CARNET D’EXPLORATION · APPRENDRE EN PRATIQUANT',"interest_app_t":"Développement d’applications","interest_app_d":"Je souhaite apprendre à concevoir et programmer des applications utiles, renforcer ma logique et découvrir les interfaces et le développement web.","interest_cyber_t":"Cybersécurité","interest_cyber_d":"Je souhaite apprendre à protéger les systèmes et les réseaux, comprendre les menaces courantes, préserver la confidentialité et appliquer la sécurité de manière éthique et légale.","interest_systems_t":"Systèmes et réseaux","interest_systems_d":"Je souhaite continuer à pratiquer Linux, la configuration réseau, la maintenance des ordinateurs et le diagnostic des problèmes.","cert_pending":"Terminé","cert_desc":"Cours d’introduction aux menaces, à la protection des données, à la confidentialité et aux bases de la cybersécurité. La réalisation du cours et des activités permet d’obtenir une reconnaissance numérique Cisco.","cert_meta":"Gratuit · Débutant · Environ 6 heures · À son rythme","cert_link":"Voir le cours officiel ↗",ct_p:"Une question ou un stage à proposer ? Écris-moi :",ph:"Téléphone",em:"E-mail"},
 ca:{n_about:"Sobre mi",n_edu:"Formació",n_skills:"Habilitats",n_proj:"Projectes",n_contact:"Contacte",
 role:"Estudiant de Sistemes Microinformàtics i Xarxes",
 lead:"Vull continuar aprenent desenvolupament d’aplicacions i ciberseguretat, a més de Linux, xarxes, maquinari i suport tècnic.",
-cta1:"Veure projectes",cta2:"Contacta’m",cta3:"Veure CV",p_status:"En desenvolupament",t_status:"Estudiant de SMR. Practicant Linux i Python.",
+cta1:"Veure projectes",cta2:"Contacta’m",cta3:"Veure CV",p_status:"Planificat",p_intro:"Tres projectes senzills i realitzables que estic planificant per practicar el que aprenc a classe.",p_plan:"Pla de treball",p_ex:"Exemple",p1_t:"Gestor de tasques",p1_d:"Aplicació de consola en Python per afegir, llistar i completar tasques, desant les dades en un fitxer JSON.",p1_s1:"Crear i llistar tasques",p1_s2:"Marcar tasques com a fetes",p1_s3:"Desar les dades en un fitxer JSON",p2_t:"Script de còpia de seguretat",p2_d:"Script en Bash que comprimeix una carpeta i la desa amb la data al nom, provat a Debian.",p2_s1:"Escriure l’script amb tar",p2_s2:"Afegir la data al nom del fitxer",p2_s3:"Programar-lo amb cron i documentar-lo",p3_t:"Mapa de la meva xarxa local",p3_d:"Documentació d’una xarxa domèstica: dispositius, adreces IP i un diagrama senzill.",p3_s1:"Llistar els dispositius connectats",p3_s2:"Anotar-ne les adreces IP",p3_s3:"Dibuixar el diagrama i explicar-lo",t_status:"Estudiant de SMR. Practicant Linux i Python.",
 about_p:"Soc estudiant de Sistemes Microinformàtics i Xarxes i m’interessa continuar aprenent desenvolupament d’aplicacions i ciberseguretat, a més d’administració de sistemes, Linux, maquinari i xarxes. M’agrada aprendre amb projectes pràctics, entendre com es creen les aplicacions, conèixer bones pràctiques de seguretat i documentar les solucions. Actualment reforço les meves bases en Debian i Python.",
 e1_t:"Cicle de Sistemes Microinformàtics i Xarxes (SMR)",e1_d:"Set. 2026 – juny 2028 · 1r curs",e1_p:"Muntatge i manteniment d’equips, sistemes operatius i configuració bàsica de xarxes locals.",
 e2_t:"Educació Secundària Obligatòria (ESO)",e2_d:"Set. 2022 – juny 2026",e2_p:"Títol obtingut.",
-s_tech:"Eines i base tècnica",s_soft:"Competències",s_lang:"Idiomes",
+s_tech:"Eines i base tècnica",s_soft:"Competències",s_lang:"Idiomes",skills_intro:"Una visió clara de les eines que estic aprenent i les competències que aporto al treball diari.",skills_tech_sub:"Entorns i fonaments que practico",skills_soft_sub:"Com col·laboro i afronto reptes",tool_os:"Sistemes i terminal",tool_python:"Fonaments de programació",tool_network:"Connectivitat i xarxes locals",tool_hardware:"Components i muntatge",tool_office:"Documents i productivitat",tool_debug:"Anàlisi d’incidències",skills_focus:"APRENENTATGE CONTINU",c5:"Treball en equip",
 k1:"Maquinari i components",k2:"Linux / Debian",k3:"Python (nivell inicial)",k4:"Xarxes locals bàsiques",k5:"Ofimàtica",k6:"Diagnòstic d’incidències",
 c1:"Resolució de problemes",c2:"Comunicació amb usuaris",c3:"Aprenentatge autònom",c4:"Organització",
 l1:"Espanyol",l1v:"Natiu",l2:"Anglès",
-p_note:"Aquests són projectes personals en desenvolupament. Hi afegiré captures, documentació i enllaços als repositoris quan cada projecte estigui publicat.",
-p1_t:"Gestor de tasques",p1_d:"Projecte d’aplicació de consola per crear, consultar i completar tasques, amb les dades desades en un fitxer JSON.",
-p2_t:"Quadern de Debian",p2_d:"Quadern d’aprenentatge per reunir ordres, pràctiques d’administració bàsica i evidències pròpies de treball amb Debian.",
-p3_t:"Guia de components",p3_d:"Recurs visual per identificar els components principals d’un equip i explicar comprovacions bàsiques de maquinari.",
-"n_interest":"Àrees d’interès","n_certs":"Certificats i formació","eyebrow":"Portfolio · Estudiant de SMR","interest_intro":"Aquestes són les àrees en què vull aprofundir i desenvolupar projectes a mesura que avanci la meva formació.","interest_app_t":"Desenvolupament d’aplicacions","interest_app_d":"Vull aprendre a dissenyar i programar aplicacions útils, millorar la meva lògica de programació i explorar interfícies i desenvolupament web.","interest_cyber_t":"Ciberseguretat","interest_cyber_d":"M’interessa aprendre a protegir sistemes i xarxes, comprendre amenaces habituals, tenir cura de la privacitat i aplicar la seguretat de manera ètica i legal.","interest_systems_t":"Sistemes i xarxes","interest_systems_d":"Vull continuar practicant amb Linux, configuració de xarxes, manteniment d’equips i resolució d’incidències.","cert_intro":"Formació complementària que estic fent o que tinc previst completar. Només marcaré com a obtingut allò que hagi acabat i pugui acreditar.","cert_pending":"Completat","cert_desc":"Curs introductori sobre amenaces, protecció de dades, privacitat i fonaments de ciberseguretat. En completar el curs i les activitats podràs obtenir el reconeixement digital de Cisco.","cert_meta":"Gratuït · Nivell inicial · Aproximadament 6 hores · Al teu ritme","cert_link":"Consultar el curs oficial ↗",ct_p:"Tens una consulta o una oferta de pràctiques? Escriu-me:",ph:"Telèfon",em:"Correu"}
+mock_tasks_title:"Les meves tasques",mock_task_a:"Preparar l’estructura",mock_task_b:"Desar dades JSON",mock_task_c:"Revisar tasques",mock_hardware_title:"Arquitectura d’un PC",
+
+
+
+"n_interest":"Àrees d’interès","n_certs":"Certificats i formació","eyebrow":"Portfolio · Estudiant de SMR","interest_intro":"Aquestes són les àrees en què vull aprofundir i desenvolupar projectes a mesura que avanci la meva formació.",bp_kicker:'LAB / 001 · PLÀNOL TÈCNIC',bp_overline:'DISSENY · SISTEMES · CURIOSITAT',bp_title:'Pensar. Dissenyar. Construir.',bp_desc:'Una mostra de com m’agrada aprendre: entendre les peces, veure com es connecten i convertir idees en projectes funcionals.',bp_footer:'QUADERN D’EXPLORACIÓ · APRENDRE FENT',"interest_app_t":"Desenvolupament d’aplicacions","interest_app_d":"Vull aprendre a dissenyar i programar aplicacions útils, millorar la meva lògica de programació i explorar interfícies i desenvolupament web.","interest_cyber_t":"Ciberseguretat","interest_cyber_d":"M’interessa aprendre a protegir sistemes i xarxes, comprendre amenaces habituals, tenir cura de la privacitat i aplicar la seguretat de manera ètica i legal.","interest_systems_t":"Sistemes i xarxes","interest_systems_d":"Vull continuar practicant amb Linux, configuració de xarxes, manteniment d’equips i resolució d’incidències.","cert_pending":"Completat","cert_desc":"Curs introductori sobre amenaces, protecció de dades, privacitat i fonaments de ciberseguretat. En completar el curs i les activitats podràs obtenir el reconeixement digital de Cisco.","cert_meta":"Gratuït · Nivell inicial · Aproximadament 6 hores · Al teu ritme","cert_link":"Consultar el curs oficial ↗",ct_p:"Tens una consulta o una oferta de pràctiques? Escriu-me:",ph:"Telèfon",em:"Correu"}
 };
 var TH={es:["Modo oscuro","Modo claro"],en:["Dark mode","Light mode"],fr:["Mode sombre","Mode clair"],ca:["Mode fosc","Mode clar"]};
 var root=document.documentElement,lang="es";
@@ -368,6 +541,16 @@ if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es
 var lines=[].slice.call(document.querySelectorAll("#tb .ln")),i=0;
 function step(){if(i<lines.length){lines[i++].classList.add("on");setTimeout(step,i%2?450:750)}}
 if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){lines.forEach(function(l){l.classList.add("on")})}else{step()}
+
+// Progressive reveal on scroll, with graceful fallback and reduced-motion support
+(function(){
+  if(!('IntersectionObserver' in window) || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  document.documentElement.classList.add('js-ready');
+  var targets=document.querySelectorAll('main section, .ribbon, .blueprint, .project-card, .skill-panel');
+  targets.forEach(function(el){el.classList.add('reveal')});
+  var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.12,rootMargin:'0px 0px -35px 0px'});
+  targets.forEach(function(el){observer.observe(el)});
+})();
 </script>
 </body>
 </html>
