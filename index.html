@@ -359,56 +359,28 @@ section>h2:before{content:attr(data-index);display:block;margin-bottom:8px;color
     <div>
       <p class="project-intro" data-i="p_intro"></p>
       <div class="project-list">
-      <article class="project-card">
-        <div class="project-bar"><i></i><i></i><i></i><span class="project-file">tareas.py</span><span class="project-status" data-i="p_status"></span></div>
-        <div class="project-body">
-          <div class="project-main">
-            <span class="project-num">01 / PYTHON</span>
-            <h3 data-i="p1_t"></h3>
-            <p data-i="p1_d"></p>
-            <ul class="project-tags"><li>Python</li><li>JSON</li><li>CLI</li></ul>
+        <article class="project-card">
+          <div class="project-bar"><i></i><i></i><i></i><span class="project-file">nibble / README.md</span><span class="project-status" data-i="p_status"></span></div>
+          <div class="project-body">
+            <div class="project-main">
+              <span class="project-num">01 / WEB APP</span>
+              <h3 data-i="p1_t"></h3>
+              <p data-i="p1_d"></p>
+              <ul class="project-tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Supabase</li></ul>
+              <div class="btns project-actions">
+                <a class="btn p" href="https://github.com/AlessioGonzalez/Nibble" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                <a class="btn" href="https://alessiogonzalez.github.io/Nibble/" target="_blank" rel="noopener noreferrer">Probar Nibble ↗</a>
+              </div>
+            </div>
+            <div class="project-side">
+              <div><h4 data-i="p_plan"></h4><ul class="project-steps"><li data-i="p1_s1"></li><li data-i="p1_s2"></li><li data-i="p1_s3"></li></ul></div>
+              <div><h4 data-i="p_ex"></h4><pre class="project-code">4 lenguajes · 30 días
+7 niveles de práctica
+Rachas · vidas · experiencia
+ES / EN / FR / IT</pre></div>
+            </div>
           </div>
-          <div class="project-side">
-            <div><h4 data-i="p_plan"></h4><ul class="project-steps"><li data-i="p1_s1"></li><li data-i="p1_s2"></li><li data-i="p1_s3"></li></ul></div>
-            <div><h4 data-i="p_ex"></h4><pre class="project-code"><b>$</b> python tareas.py add "Estudiar Debian"
-<b>$</b> python tareas.py list
-<b>$</b> python tareas.py done 1</pre></div>
-          </div>
-        </div>
-      </article>
-      <article class="project-card">
-        <div class="project-bar"><i></i><i></i><i></i><span class="project-file">backup.sh</span><span class="project-status" data-i="p_status"></span></div>
-        <div class="project-body">
-          <div class="project-main">
-            <span class="project-num">02 / LINUX</span>
-            <h3 data-i="p2_t"></h3>
-            <p data-i="p2_d"></p>
-            <ul class="project-tags"><li>Bash</li><li>Debian</li><li>cron</li></ul>
-          </div>
-          <div class="project-side">
-            <div><h4 data-i="p_plan"></h4><ul class="project-steps"><li data-i="p2_s1"></li><li data-i="p2_s2"></li><li data-i="p2_s3"></li></ul></div>
-            <div><h4 data-i="p_ex"></h4><pre class="project-code"><b>$</b> ./backup.sh ~/Documentos ~/copias
-<b>&gt;</b> copias/documentos_2026-11-05.tar.gz</pre></div>
-          </div>
-        </div>
-      </article>
-      <article class="project-card">
-        <div class="project-bar"><i></i><i></i><i></i><span class="project-file">red.md</span><span class="project-status" data-i="p_status"></span></div>
-        <div class="project-body">
-          <div class="project-main">
-            <span class="project-num">03 / LAN</span>
-            <h3 data-i="p3_t"></h3>
-            <p data-i="p3_d"></p>
-            <ul class="project-tags"><li>LAN</li><li>IP</li><li>Wi-Fi</li></ul>
-          </div>
-          <div class="project-side">
-            <div><h4 data-i="p_plan"></h4><ul class="project-steps"><li data-i="p3_s1"></li><li data-i="p3_s2"></li><li data-i="p3_s3"></li></ul></div>
-            <div><h4 data-i="p_ex"></h4><pre class="project-code">router   192.168.1.1
-portatil 192.168.1.10
-movil    192.168.1.20</pre></div>
-          </div>
-        </div>
-      </article>
+        </article>
       </div>
     </div>
   </section>
@@ -450,7 +422,7 @@ var T={
 es:{n_about:"Sobre mí",n_edu:"Formación",n_skills:"Habilidades",n_proj:"Proyectos",n_contact:"Contacto",
 role:"Estudiante de Sistemas Microinformáticos y Redes",
 lead:"Me interesa aprender desarrollo de aplicaciones y ciberseguridad, además de Linux, redes, hardware y soporte técnico. Me motiva crear, entender cómo funcionan las cosas y seguir aprendiendo.",
-cta1:"Ver proyectos",cta2:"Escríbeme",cta3:"Ver CV",p_status:"Planificado",p_intro:"Tres proyectos sencillos y realizables que estoy planificando para practicar lo que voy aprendiendo en clase.",p_plan:"Plan de trabajo",p_ex:"Ejemplo",p1_t:"Gestor de tareas",p1_d:"Aplicación de consola en Python para añadir, listar y completar tareas, guardando los datos en un archivo JSON.",p1_s1:"Crear y listar tareas",p1_s2:"Marcar tareas como hechas",p1_s3:"Guardar los datos en un archivo JSON",p2_t:"Script de copia de seguridad",p2_d:"Script en Bash que comprime una carpeta y la guarda con la fecha en el nombre, probado en Debian.",p2_s1:"Escribir el script con tar",p2_s2:"Añadir la fecha al nombre del archivo",p2_s3:"Programarlo con cron y documentarlo",p3_t:"Mapa de mi red local",p3_d:"Documentación de una red doméstica: dispositivos, direcciones IP y un diagrama sencillo.",p3_s1:"Listar los dispositivos conectados",p3_s2:"Anotar sus direcciones IP",p3_s3:"Dibujar el diagrama y explicarlo",t_status:"Estudiante de SMR. Practicando Linux y Python.",
+cta1:"Ver proyectos",cta2:"Escríbeme",cta3:"Ver CV",p_status:'Proyecto publicado',p_intro:'Proyecto personal de aprendizaje: una plataforma interactiva para practicar programación con retos diarios y ejercicios cortos.',p_plan:'Características',p_ex:'Tecnologías y contenido',p1_t:'Nibble',p1_d:'Aplicación web para aprender Python, Java, JavaScript y C++ mediante retos de 30 días. Incluye lecciones, ejercicios prácticos, rachas, vidas y seguimiento del progreso en la nube.',p1_s1:'Cuatro cursos con 30 días de aprendizaje cada uno.',p1_s2:'Siete niveles de práctica y un reto final por día.',p1_s3:'Interfaz en cuatro idiomas y progreso sincronizado con Supabase.',p2_t:"Script de copia de seguridad",p2_d:"Script en Bash que comprime una carpeta y la guarda con la fecha en el nombre, probado en Debian.",p2_s1:"Escribir el script con tar",p2_s2:"Añadir la fecha al nombre del archivo",p2_s3:"Programarlo con cron y documentarlo",p3_t:"Mapa de mi red local",p3_d:"Documentación de una red doméstica: dispositivos, direcciones IP y un diagrama sencillo.",p3_s1:"Listar los dispositivos conectados",p3_s2:"Anotar sus direcciones IP",p3_s3:"Dibujar el diagrama y explicarlo",t_status:"Estudiante de SMR. Practicando Linux y Python.",
 about_p:"Soy estudiante de Sistemas Microinformáticos y Redes y me interesa seguir creciendo en desarrollo de aplicaciones y ciberseguridad, además de la administración de sistemas, Linux, hardware y redes. Me gusta aprender mediante proyectos prácticos, entender cómo se construyen las aplicaciones, conocer buenas prácticas de seguridad y documentar las soluciones. Actualmente estoy reforzando mis bases en Debian y Python.",
 e1_t:"Ciclo de Sistemas Microinformáticos y Redes (SMR)",e1_d:"Sept. 2026 – Jun. 2028 · 1.º curso",e1_p:"Montaje y mantenimiento de equipos, sistemas operativos y configuración básica de redes locales.",
 e2_t:"Educación Secundaria Obligatoria (ESO)",e2_d:"Sept. 2022 – Jun. 2026",e2_p:"Título obtenido.",
@@ -466,7 +438,7 @@ mock_tasks_title:"Mis tareas",mock_task_a:"Preparar estructura",mock_task_b:"Gua
 en:{n_about:"About me",n_edu:"Education",n_skills:"Skills",n_proj:"Projects",n_contact:"Contact",
 role:"Microcomputer Systems and Networks student",
 lead:"I want to keep learning application development and cybersecurity, alongside Linux, networking, hardware and technical support.",
-cta1:"See projects",cta2:"Contact me",cta3:"View CV",p_status:"Planned",p_intro:"Three simple, achievable projects I am planning in order to practise what I am learning in class.",p_plan:"Work plan",p_ex:"Example",p1_t:"Task manager",p1_d:"A Python console app to add, list and complete tasks, storing the data in a JSON file.",p1_s1:"Create and list tasks",p1_s2:"Mark tasks as done",p1_s3:"Save the data in a JSON file",p2_t:"Backup script",p2_d:"A Bash script that compresses a folder and saves it with the date in its name, tested on Debian.",p2_s1:"Write the script with tar",p2_s2:"Add the date to the file name",p2_s3:"Schedule it with cron and document it",p3_t:"Home network map",p3_d:"Documentation of a home network: devices, IP addresses and a simple diagram.",p3_s1:"List the connected devices",p3_s2:"Write down their IP addresses",p3_s3:"Draw the diagram and explain it",t_status:"SMR student. Practising Linux and Python.",
+cta1:"See projects",cta2:"Contact me",cta3:"View CV",p_status:'Published project',p_intro:'Personal learning project: an interactive platform for practising programming through daily challenges and short exercises.',p_plan:'Features',p_ex:'Technology and content',p1_t:'Nibble',p1_d:'A web app for learning Python, Java, JavaScript and C++ through 30-day challenges. It includes lessons, practical exercises, streaks, lives and cloud progress tracking.',p1_s1:'Four courses, each with 30 days of learning.',p1_s2:'Seven practice levels and a final challenge each day.',p1_s3:'Four-language interface and progress synced with Supabase.',p2_t:"Backup script",p2_d:"A Bash script that compresses a folder and saves it with the date in its name, tested on Debian.",p2_s1:"Write the script with tar",p2_s2:"Add the date to the file name",p2_s3:"Schedule it with cron and document it",p3_t:"Home network map",p3_d:"Documentation of a home network: devices, IP addresses and a simple diagram.",p3_s1:"List the connected devices",p3_s2:"Write down their IP addresses",p3_s3:"Draw the diagram and explain it",t_status:"SMR student. Practising Linux and Python.",
 about_p:"I am a Microcomputer Systems and Networks student interested in growing my skills in application development and cybersecurity, as well as system administration, Linux, hardware and networking. I enjoy learning through practical projects, understanding how applications are built, exploring good security practices and documenting solutions. I am currently strengthening my foundations in Debian and Python.",
 e1_t:"Microcomputer Systems and Networks (SMR) vocational course",e1_d:"Sept. 2026 – Jun. 2028 · 1st year",e1_p:"Assembling and maintaining computers, operating systems and basic local network setup.",
 e2_t:"Compulsory Secondary Education (ESO)",e2_d:"Sept. 2022 – Jun. 2026",e2_p:"Diploma obtained.",
@@ -482,7 +454,7 @@ mock_tasks_title:"My tasks",mock_task_a:"Prepare structure",mock_task_b:"Save JS
 fr:{n_about:"À propos",n_edu:"Formation",n_skills:"Compétences",n_proj:"Projets",n_contact:"Contact",
 role:"Étudiant en systèmes microinformatiques et réseaux",
 lead:"Je souhaite apprendre le développement d’applications et la cybersécurité, en plus de Linux, des réseaux, du matériel et du support technique.",
-cta1:"Voir les projets",cta2:"Me contacter",cta3:"Voir CV",p_status:"Prévu",p_intro:"Trois projets simples et réalisables que je prévois pour pratiquer ce que j’apprends en cours.",p_plan:"Plan de travail",p_ex:"Exemple",p1_t:"Gestionnaire de tâches",p1_d:"Application console en Python pour ajouter, lister et terminer des tâches, avec les données enregistrées dans un fichier JSON.",p1_s1:"Créer et lister des tâches",p1_s2:"Marquer les tâches comme faites",p1_s3:"Enregistrer les données dans un fichier JSON",p2_t:"Script de sauvegarde",p2_d:"Script Bash qui compresse un dossier et l’enregistre avec la date dans son nom, testé sous Debian.",p2_s1:"Écrire le script avec tar",p2_s2:"Ajouter la date au nom du fichier",p2_s3:"Le planifier avec cron et le documenter",p3_t:"Plan de mon réseau local",p3_d:"Documentation d’un réseau domestique : appareils, adresses IP et un schéma simple.",p3_s1:"Lister les appareils connectés",p3_s2:"Noter leurs adresses IP",p3_s3:"Dessiner le schéma et l’expliquer",t_status:"Étudiant en SMR. Pratique Linux et Python.",
+cta1:"Voir les projets",cta2:"Me contacter",cta3:"Voir CV",p_status:'Projet publié',p_intro:'Projet personnel d’apprentissage : une plateforme interactive pour pratiquer la programmation avec des défis quotidiens et des exercices courts.',p_plan:'Fonctionnalités',p_ex:'Technologies et contenu',p1_t:'Nibble',p1_d:'Application web pour apprendre Python, Java, JavaScript et C++ grâce à des défis de 30 jours. Elle propose des leçons, des exercices pratiques, des séries, des vies et le suivi du progrès dans le cloud.',p1_s1:'Quatre cours de 30 jours chacun.',p1_s2:'Sept niveaux de pratique et un défi final chaque jour.',p1_s3:'Interface en quatre langues et progression synchronisée avec Supabase.',p2_t:"Script de sauvegarde",p2_d:"Script Bash qui compresse un dossier et l’enregistre avec la date dans son nom, testé sous Debian.",p2_s1:"Écrire le script avec tar",p2_s2:"Ajouter la date au nom du fichier",p2_s3:"Le planifier avec cron et le documenter",p3_t:"Plan de mon réseau local",p3_d:"Documentation d’un réseau domestique : appareils, adresses IP et un schéma simple.",p3_s1:"Lister les appareils connectés",p3_s2:"Noter leurs adresses IP",p3_s3:"Dessiner le schéma et l’expliquer",t_status:"Étudiant en SMR. Pratique Linux et Python.",
 about_p:"Je suis étudiant en systèmes microinformatiques et réseaux et je souhaite développer mes compétences en développement d’applications et en cybersécurité, ainsi qu’en administration des systèmes, Linux, matériel et réseaux. J’aime apprendre par des projets pratiques, comprendre la création des applications, découvrir les bonnes pratiques de sécurité et documenter les solutions. Je renforce actuellement mes bases en Debian et Python.",
 e1_t:"Cycle de systèmes microinformatiques et réseaux (SMR)",e1_d:"Sept. 2026 – juin 2028 · 1re année",e1_p:"Montage et maintenance d’ordinateurs, systèmes d’exploitation et configuration de base des réseaux locaux.",
 e2_t:"Enseignement secondaire obligatoire (ESO)",e2_d:"Sept. 2022 – juin 2026",e2_p:"Diplôme obtenu.",
@@ -498,7 +470,7 @@ mock_tasks_title:"Mes tâches",mock_task_a:"Préparer la structure",mock_task_b:
 ca:{n_about:"Sobre mi",n_edu:"Formació",n_skills:"Habilitats",n_proj:"Projectes",n_contact:"Contacte",
 role:"Estudiant de Sistemes Microinformàtics i Xarxes",
 lead:"Vull continuar aprenent desenvolupament d’aplicacions i ciberseguretat, a més de Linux, xarxes, maquinari i suport tècnic.",
-cta1:"Veure projectes",cta2:"Contacta’m",cta3:"Veure CV",p_status:"Planificat",p_intro:"Tres projectes senzills i realitzables que estic planificant per practicar el que aprenc a classe.",p_plan:"Pla de treball",p_ex:"Exemple",p1_t:"Gestor de tasques",p1_d:"Aplicació de consola en Python per afegir, llistar i completar tasques, desant les dades en un fitxer JSON.",p1_s1:"Crear i llistar tasques",p1_s2:"Marcar tasques com a fetes",p1_s3:"Desar les dades en un fitxer JSON",p2_t:"Script de còpia de seguretat",p2_d:"Script en Bash que comprimeix una carpeta i la desa amb la data al nom, provat a Debian.",p2_s1:"Escriure l’script amb tar",p2_s2:"Afegir la data al nom del fitxer",p2_s3:"Programar-lo amb cron i documentar-lo",p3_t:"Mapa de la meva xarxa local",p3_d:"Documentació d’una xarxa domèstica: dispositius, adreces IP i un diagrama senzill.",p3_s1:"Llistar els dispositius connectats",p3_s2:"Anotar-ne les adreces IP",p3_s3:"Dibuixar el diagrama i explicar-lo",t_status:"Estudiant de SMR. Practicant Linux i Python.",
+cta1:"Veure projectes",cta2:"Contacta’m",cta3:"Veure CV",p_status:'Projecte publicat',p_intro:'Projecte personal d’aprenentatge: una plataforma interactiva per practicar programació amb reptes diaris i exercicis curts.',p_plan:'Característiques',p_ex:'Tecnologies i contingut',p1_t:'Nibble',p1_d:'Aplicació web per aprendre Python, Java, JavaScript i C++ mitjançant reptes de 30 dies. Inclou lliçons, exercicis pràctics, ratxes, vides i seguiment del progrés al núvol.',p1_s1:'Quatre cursos amb 30 dies d’aprenentatge cadascun.',p1_s2:'Set nivells de pràctica i un repte final cada dia.',p1_s3:'Interfície en quatre idiomes i progrés sincronitzat amb Supabase.',p2_t:"Script de còpia de seguretat",p2_d:"Script en Bash que comprimeix una carpeta i la desa amb la data al nom, provat a Debian.",p2_s1:"Escriure l’script amb tar",p2_s2:"Afegir la data al nom del fitxer",p2_s3:"Programar-lo amb cron i documentar-lo",p3_t:"Mapa de la meva xarxa local",p3_d:"Documentació d’una xarxa domèstica: dispositius, adreces IP i un diagrama senzill.",p3_s1:"Llistar els dispositius connectats",p3_s2:"Anotar-ne les adreces IP",p3_s3:"Dibuixar el diagrama i explicar-lo",t_status:"Estudiant de SMR. Practicant Linux i Python.",
 about_p:"Soc estudiant de Sistemes Microinformàtics i Xarxes i m’interessa continuar aprenent desenvolupament d’aplicacions i ciberseguretat, a més d’administració de sistemes, Linux, maquinari i xarxes. M’agrada aprendre amb projectes pràctics, entendre com es creen les aplicacions, conèixer bones pràctiques de seguretat i documentar les solucions. Actualment reforço les meves bases en Debian i Python.",
 e1_t:"Cicle de Sistemes Microinformàtics i Xarxes (SMR)",e1_d:"Set. 2026 – juny 2028 · 1r curs",e1_p:"Muntatge i manteniment d’equips, sistemes operatius i configuració bàsica de xarxes locals.",
 e2_t:"Educació Secundària Obligatòria (ESO)",e2_d:"Set. 2022 – juny 2026",e2_p:"Títol obtingut.",
